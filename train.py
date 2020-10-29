@@ -93,8 +93,10 @@ def read_train_file(input_path, alpha=0.5):
 
 
 submission_df = read_submission_file('./')
+print('------------------------------------train start------------------------------------')
 train_df, mapping = read_train_file('./')
-#train_df.head(10)
+print(train_df.head(10))
+print('train dataset: {}'.format(len(train_df)))#train_df.head(10)
 
 
 def _get_transform_matrix(rotation, shear, hzoom, wzoom, hshift, wshift):

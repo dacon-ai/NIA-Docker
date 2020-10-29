@@ -62,7 +62,7 @@ config = {
 
 
 def read_submission_file(input_path, alpha=0.5):
-    files_paths = glob.glob(input_path + 'test/undefined/*/*.JPG')
+    files_paths = glob.glob(input_path + 'dataset/test/undefined/*/*.JPG')
     mapping = {}
     for path in files_paths:
         mapping[path.split('/')[-1].split('.')[0]] = path
@@ -75,7 +75,7 @@ def read_submission_file(input_path, alpha=0.5):
 
 
 def read_train_file(input_path, alpha=0.5):
-    files_paths = glob.glob(input_path + 'train/*/*/*.JPG')
+    files_paths = glob.glob(input_path + 'dataset/train/*/*/*.JPG')
     mapping = {}
     for path in files_paths:
         mapping[path.split('/')[-1][:-4]] = path

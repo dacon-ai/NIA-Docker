@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y git
 
 RUN git clone https://github.com/dacon-ai/NIA-Docker.git
 
-WORKDIR /NIA-Landmark/Recognition
+WORKDIR /NIA-Docker
 
-RUN pip install -r requirements.txt
+RUN python -m pip install --upgrade pip
+
+RUN python -m pip install -r requirements.txt
